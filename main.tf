@@ -1,12 +1,12 @@
 # Define AWS provider
 provider "aws" {
-  region = "us-east-1" # Change to your preferred AWS region
+  region = "us-east-1"
 }
 
 # Define AWS EC2 Instances
 resource "aws_instance" "example_vm" {
   count         = 3 # Create 3 VMs
-  ami           = "ami-0e2c8caa4b6378d8c" # Replace with your valid AMI ID
+  ami           = "ami-0e2c8caa4b6378d8c" 
   instance_type = "t2.micro"
 
   tags = {
